@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -6,6 +6,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Deploy\**" />
+    <Compile Remove="Publish\**" />
+    <Content Remove="Deploy\**" />
+    <Content Remove="Publish\**" />
+    <EmbeddedResource Remove="Deploy\**" />
+    <EmbeddedResource Remove="Publish\**" />
+    <None Remove="Deploy\**" />
+    <None Remove="Publish\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.8" />
